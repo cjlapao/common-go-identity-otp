@@ -1,4 +1,4 @@
-# Common Libraries used by other projects
+# Common Identity Framework OTP
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![Build](https://github.com/cjlapao/common-go-identity/workflows/Build/badge.svg) ![Release](https://github.com/cjlapao/common-go-identity/workflows/Release/badge.svg) ![Security](https://github.com/cjlapao/common-go-identity/workflows/CodeQL/badge.svg)  
 
