@@ -8,6 +8,10 @@ import (
 )
 
 func GenerateCode(secret string, t time.Time, options *TotpOptions) (string, error) {
+	if options == nil {
+		options = NewDefaultTotpOptions()
+	}
+
 	if options.Period == 0 {
 		options.Period = 30
 	}
