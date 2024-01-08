@@ -232,3 +232,18 @@ func TestGoogleLowerCaseSecret(t *testing.T) {
 	require.NoError(t, err)
 	require.True(t, valid)
 }
+
+func TestValidateWithLongCode(t *testing.T) {
+	options := TotpOptions{
+		Period:   300,
+		Skew:     1,
+		CodeSize: common.SixDigits,
+	}
+	code, err := GenerateCode("JBSWY3DPEHPK3PXP", time.Now().UTC(), &options)
+	require.NoError(t, err)
+
+	time.Sleep(2 * time.Minute)
+	valid, err := Validate(code, "JBSWY3DPEHPK3PXP", time.Now().UTC(), &options)
+	require.NoError(t, err)
+	require.True(t, valid)
+}
