@@ -2,7 +2,7 @@ module github.com/cjlapao/common-go-identity-otp
 
 go 1.23.0
 
-toolchain go1.24.1
+toolchain go1.23.5
 
 require (
 	github.com/cjlapao/common-go v0.0.48
